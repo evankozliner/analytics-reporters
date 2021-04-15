@@ -25,7 +25,7 @@ Example: `ruby datadog.rb "prod/analytics/analytics_dd_api_key" "6ab1c29dedfffff
 
 * Auth is done through AWS secrets manager, so you will need access to the analytics datadog API key in secrets managerand to be authenticated using SAML. To see if you have access, you can run the below:
   * `aws secretsmanager get-secret-value --secret-id prod/analytics/analytics_dd_api_key`
-* You will also need the datadog application key. You can get this by visiting [here](https://app.datadoghq.com/account/settings#api) and hovering over "Report Generation"
+* You will also need the datadog application key. You can get this by visiting [here](https://app.datadoghq.com/access/application-keys) and hovering over "Report Generation"
 * If you have access to `prod/analytics/analytics_dd_api_key` then `ruby "prod/analytics/analytics_dd_api_key" "slack-group"` should work for you
 * The `slack-group` is a search string used to match your slack group. 
   * E.g. `slack-analytics-alerts` will match monitors firing for the [analytic's team's notifications](https://app.datadoghq.com/monitors/manage?q=notification%3Aslack-analytics-alerts)
