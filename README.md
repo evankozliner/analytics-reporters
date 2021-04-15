@@ -21,7 +21,7 @@ Example: `python generate_pagerduty_report.py --start_date="2020-11-17" --end_da
 
 `ruby datadog_report.rb "your-datadog-api-key-secret-id" "datadog-application-key" "slack-group" "start-date" "end-date"`
 
-Example: `ruby datadog_report.rb "prod/analytics/analytics_dd_api_key" "6ab1c29dedffffffffffffffffffffffff" "slack-analytics-alerts" "2020-11-01" "2020-11-08" >> datadog_report.csv`
+Example: `ruby datadog.rb "prod/analytics/analytics_dd_api_key" "6ab1c29dedffffffffffffffffffffffff" "slack-analytics-alerts" "2020-11-01" "2020-11-08" >> datadog_report.csv`
 
 * Auth is done through AWS secrets manager, so you will need access to the analytics datadog API key in secrets managerand to be authenticated using SAML. To see if you have access, you can run the below:
   * `aws secretsmanager get-secret-value --secret-id prod/analytics/analytics_dd_api_key`
